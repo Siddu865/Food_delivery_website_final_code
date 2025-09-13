@@ -1,0 +1,136 @@
+.orders-page {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px red solid;
+}
+
+.orders-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #222;
+  text-align: center;
+  position: relative;
+}
+
+.orders-title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #4f46e5; /* Indigo accent */
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.orders-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.order-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.order-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+.order-items {
+  margin: 12px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.order-item img {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  margin-right: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-item span:first-of-type {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.order-address {
+  margin: 12px 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  background: #f9fafb;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.order-address strong {
+  color: #111;
+}
+
+.order-status {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.order-status p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.order-status select {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.order-status select:focus {
+  border-color: #4f46e5;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.25);
+}
+
+.no-orders {
+  margin-top: 50px;
+  font-size: 18px;
+  color: #6b7280;
+  text-align: center;
+}

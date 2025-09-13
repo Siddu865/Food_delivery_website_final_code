@@ -1,0 +1,53 @@
+.food-item-container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  border: 1px green solid;
+  width: 22%;
+}
+
+.food-image-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-size: cover;
+  height: 200px;
+}
+
+.food-image {
+  width: 100%;
+}
+
+.details-container {
+  width: 100%;
+  padding: 10px;
+}
+
+.price-text {
+  color: darkgoldenrod;
+}
+
+.add-icon-button {
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  border-radius: 24px;
+  outline: none !important;
+}
+
+.add-icon {
+  width: auto;
+  height: auto;
+  outline: none;
+}
+
+.add-product-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  margin: 5px;
+  border-radius: 20px;
+  width: 100px;
+}
