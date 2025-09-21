@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { TailSpin } from "react-loader-spinner";
+import { ClipLoader } from "react-spinners";
 import "./FoodItemsList.css";
 import FoodItem from "../FoodItem/FoodItem";
 
@@ -38,8 +38,8 @@ const FoodItemsList = ({ selectedMenuItem, searchQuery, authStateVersion, isLogi
   }, [selectedMenuItem, searchQuery]);
 
   return loading ? (
-    <div data-testid="loader">
-      <TailSpin height="80" width="80" type="threedots" color="orange" />
+    <div data-testid="loader" style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}>
+      <ClipLoader size={80} color="orange" />
     </div>
   ) : (
     <div className="food-items-container">

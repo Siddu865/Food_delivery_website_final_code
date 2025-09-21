@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { TailSpin } from "react-loader-spinner";
+import { ClipLoader } from "react-spinners";
 import Menu from "../Menu/Menu";
 import "./MenuCard.css";
 
@@ -8,6 +8,7 @@ const MenuCard = (props) => {
   const [menuDetails, setMenuDetails] = useState([]);
   const [selectedMenuId, setSelectedMenuId] = useState(null);
   const { changeSelectedItem } = props;
+
   const changeSelectedMenuId = (id) => {
     if (id === selectedMenuId) {
       setSelectedMenuId(null);
@@ -15,6 +16,7 @@ const MenuCard = (props) => {
       setSelectedMenuId(id);
     }
   };
+
   useEffect(() => {
     const apiFunction = async () => {
       try {
@@ -34,9 +36,13 @@ const MenuCard = (props) => {
     };
     apiFunction();
   }, []);
+
   return loading ? (
-    <div data-testid="loader">
-      <TailSpin height="80" width="80" type="threedots" color="orange" />
+    <div
+      data-testid="loader"
+      style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}
+    >
+      <ClipLoader size={80} color="orange" />
     </div>
   ) : (
     <div className="menu-card-container">
