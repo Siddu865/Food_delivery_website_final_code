@@ -472,6 +472,6 @@ app.delete("/orders/:id", verifyAdminToken, async (req, res) => {
 });
 
 // ---------------- SERVER ---------------- //
-app.listen(PORT, () => {
-  console.log(`App is running at the port ${PORT}`);
+app.listen(process.env.PORT || 5555, () => {
+  console.log(`App is running at the port ${process.env.PORT||PORT}`);
 });
